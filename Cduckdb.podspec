@@ -5,9 +5,9 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://example.com"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Your Name" => "your@email.com" }
-  spec.source       = { :git => "https://github.com/JAK0TA/duckdb-swift.git", :tag => 'v0.10.1-dev949'}
+  spec.source       = { :git => "https://github.com/JAK0TA/duckdb-swift.git", :tag => 'v.0.10.2'}
 
-  spec.source_files = 'Sources/Cduckdb/include/*.h'
+  spec.source_files = 'Sources/Cduckdb/**/*'
   spec.public_header_files = 'Sources/Cduckdb/include/*.h'
   # spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
   # spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
