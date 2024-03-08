@@ -43,5 +43,4 @@ Pod::Spec.new do |spec|
 
   spec.cocoapods_version = '>= 1.10.0'
 
-  spec.dependency 'DuckDB/Cduckdb'
 end
