@@ -28,12 +28,15 @@ Pod::Spec.new do |spec|
   spec.version      = "0.10.1"
   spec.summary      = "Summary of DuckDB"
   spec.homepage     = "https://example.com"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.license      = 'MIT'
   spec.author       = { "Your Name" => "your@email.com" }
   spec.source       = { :git => "https://github.com/JAK0TA/duckdb-swift.git", :tag => 'v0.10.1-dev949'}
 
   spec.ios.deployment_target = '12.0'
   spec.osx.deployment_target = '10.14'
+
+  spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  spec.swift_version = '5.0'
 
   spec.subspec 'Cduckdb' do |cduckdb|
     cduckdb.source_files = 'Sources/Cduckdb/include/*.h'
@@ -47,5 +50,4 @@ Pod::Spec.new do |spec|
     duckdb.dependency 'DuckDB/Cduckdb'
   end
 
-  spec.cocoapods_version = '>= 1.10.0'
 end
