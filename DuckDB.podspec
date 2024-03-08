@@ -44,7 +44,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'DuckDB' do |duckdb|
     duckdb.source_files = 'Sources/DuckDB/**/*.swift'
-    duckdb.dependency 'Cduckdb'
+    duckdb.dependency 'DuckDB/Cduckdb'
   end
 
   spec.cocoapods_version = '>= 1.10.0'
