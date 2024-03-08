@@ -55,7 +55,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'DuckDB' do |duckdb|
     duckdb.dependency 'DuckDB/Cduckdb'
-    duckdb.source_files = 'Sources/**/*.swift'
+    duckdb.source_files = 'Sources/DuckDB/**/*.swift'
 
   end
 
