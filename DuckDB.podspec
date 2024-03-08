@@ -37,20 +37,27 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = '5.0'
 
+  spec.dependency 'Cduckdb'
+  
   spec.subspec 'Cduckdb' do |cduckdb|
     cduckdb.source_files = 'Sources/Cduckdb/include/*.h'
     cduckdb.public_header_files = 'Sources/Cduckdb/include/*.h'
     cduckdb.library = "c++"
 
-    cduckdb.pod_target_xcconfig = { 
-      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/Sources/Cduckdb/include"',
+    cduckdb.xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/Sources/Cduckdb"'
+    }
+    cduckdb.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/Sources/Cduckdb"'
     }
   end
 
 
   spec.subspec 'DuckDB' do |duckdb|
     duckdb.dependency 'DuckDB/Cduckdb'
-    duckdb.source_files = 'Sources/DuckDB/**/*.swift'
+    duckdb.source_files = 'Sources/**/*.swift'
+    duckdb.public_header_files = 'Sources/**/*.h'
+
   end
 
 end
