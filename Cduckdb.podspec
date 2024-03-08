@@ -9,8 +9,8 @@ Pod::Spec.new do |spec|
 
   spec.source_files = 'Sources/Cduckdb/include/*.h'
   spec.public_header_files = 'Sources/Cduckdb/include/*.h'
-  spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
-  spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
+  # spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
+  # spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
 
   spec.pod_target_xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-D DUCKDB_BUILD_LIBRARY -D DUCKDB_EXTENSION_PARQUET_LINKED -D DUCKDB_EXTENSION_ICU_LINKED -D DUCKDB_EXTENSION_JSON_LINKED'
