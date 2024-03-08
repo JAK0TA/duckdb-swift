@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "Your Name" => "your@email.com" }
   spec.source       = { :git => "https://github.com/JAK0TA/duckdb-swift.git", :tag => 'main'}
 
-  spec.source_files = 
+  spec.source_files = [
         "Sources/Cduckdb/duckdb/ub_src_catalog.cpp",
         "Sources/Cduckdb/duckdb/ub_src_catalog_catalog_entry.cpp",
         "Sources/Cduckdb/duckdb/ub_src_catalog_catalog_entry_dependency.cpp",
@@ -296,6 +296,7 @@ Pod::Spec.new do |spec|
         "Sources/Cduckdb/duckdb/extension/json/serialize_json.cpp",
         "Sources/Cduckdb/duckdb/ub_extension_json_json_functions.cpp",
         "Sources/Cduckdb/duckdb/extension/json/yyjson/yyjson.cpp"
+      ]
 
   spec.library = 'c++'
   spec.xcconfig = {
@@ -303,7 +304,41 @@ Pod::Spec.new do |spec|
     'CLANG_CXX_LIBRARY' => 'libc++'
   }
 
-  spec.public_header_files = 'Sources/Cduckdb/include/*.h'
+  spec.public_header_files = [
+    'Sources/Cduckdb/include/*.h'
+  "Sources/Cduckdb/duckdb/src/include/**/*.hpp",
+  "Sources/Cduckdb/duckdb/third_party/fmt/include/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/fsst/**/*.hpp",
+  "Sources/Cduckdb/duckdb/third_party/re2/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/miniz/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/utf8proc/include/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/utf8proc/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/hyperloglog/**/*.hpp",
+  "Sources/Cduckdb/duckdb/third_party/skiplist/**/*.hpp",
+  "Sources/Cduckdb/duckdb/third_party/fastpforlib/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/tdigest/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/libpg_query/include/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/libpg_query/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/concurrentqueue/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/pcg/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/httplib/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/fast_float/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/mbedtls/include/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/mbedtls/library/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/jaro_winkler/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/jaro_winkler/details/**/*.h",
+  "Sources/Cduckdb/duckdb/extension/parquet/include/**/*.hpp",
+  "Sources/Cduckdb/duckdb/third_party/parquet/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/thrift/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/snappy/**/*.h",
+  "Sources/Cduckdb/duckdb/third_party/zstd/include/**/*.h",
+  "Sources/Cduckdb/duckdb/extension/icu/include/**/*.h",
+  "Sources/Cduckdb/duckdb/extension/icu/third_party/icu/common/**/*.h",
+  "Sources/Cduckdb/duckdb/extension/icu/third_party/icu/i18n/**/*.h",
+  "Sources/Cduckdb/duckdb/extension/json/include/**/*.hpp",
+  "Sources/Cduckdb/duckdb/extension/json/yyjson/include/**/*.h"
+]
+
   # spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
   # spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
 
