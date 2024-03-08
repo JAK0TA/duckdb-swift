@@ -305,7 +305,7 @@ Pod::Spec.new do |spec|
   }
 
   spec.public_header_files = [
-    'Sources/Cduckdb/include/*.h'
+    'Sources/Cduckdb/include/*.h',
   "Sources/Cduckdb/duckdb/src/include/**/*.hpp",
   "Sources/Cduckdb/duckdb/third_party/fmt/include/**/*.h",
   "Sources/Cduckdb/duckdb/third_party/fsst/**/*.hpp",
