@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files = 'Sources/Cduckdb/include/*.h'
   spec.public_header_files = 'Sources/Cduckdb/include/*.h'
-  spec.reserve_paths = 'Sources/Cduckdb/include/*.h'
+  spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
   spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
 
   spec.cocoapods_version = '>= 1.10.0'
