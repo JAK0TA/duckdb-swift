@@ -20,6 +20,7 @@ Pod::Spec.new do |spec|
 
   spec.pod_target_xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-DDUCKDB_BUILD_LIBRARY -DDUCKDB_EXTENSION_PARQUET_LINKED -DDUCKDB_EXTENSION_ICU_LINKED -DDUCKDB_EXTENSION_JSON_LINKED'
+    'OTHER_LDFLAGS' => '-l"stdc++"'
   }
 
   spec.cocoapods_version = '>= 1.10.0'
