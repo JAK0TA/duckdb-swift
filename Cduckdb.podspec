@@ -7,7 +7,13 @@ Pod::Spec.new do |spec|
   spec.author       = { "Your Name" => "your@email.com" }
   spec.source       = { :git => "https://github.com/JAK0TA/duckdb-swift.git", :tag => 'main'}
 
-  spec.source_files = 'Sources/Cduckdb/include/*.h'
+  spec.source_files = "Sources/Cduckdb/**/*.{swift,c,m,h,mm,cpp,plist}"
+  spec.library = 'c++'
+  spec.xcconfig = {
+    'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
+    'CLANG_CXX_LIBRARY' => 'libc++'
+  }
+
   spec.public_header_files = 'Sources/Cduckdb/include/*.h'
   # spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
   # spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
@@ -20,7 +26,6 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target = '12.0'
   spec.osx.deployment_target = '10.14'
-  spec.library = "c++"
 
 
 end
