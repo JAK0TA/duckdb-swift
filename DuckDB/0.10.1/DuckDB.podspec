@@ -10,11 +10,9 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '12.0'
   spec.osx.deployment_target = '10.14'
 
-
-  spec.source_files = 'Sources/**/*{.h, .swift}'
-  spec.public_header_files = 'Sources/**/*.h'
+  spec.source_files = 'Sources/DuckDB/**/*.swift'
 
   spec.cocoapods_version = '>= 1.10.0'
 
-  # spec.dependency 'Cduckdb'
+  spec.dependency 'Cduckdb'
 end
