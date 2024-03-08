@@ -7,8 +7,10 @@ Pod::Spec.new do |spec|
   spec.author       = { "Your Name" => "your@email.com" }
   spec.source       = { :git => "https://github.com/JAK0TA/duckdb-swift.git", :tag => 'v0.10.1-dev949'}
 
-  spec.source_files = 'Sources/Cduckdb/**/*.{h, ccp}'
+  spec.source_files = 'Sources/Cduckdb/include/*.h'
   spec.public_header_files = 'Sources/Cduckdb/include/*.h'
+  spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
+  spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
 
   spec.cocoapods_version = '>= 1.10.0'
 
