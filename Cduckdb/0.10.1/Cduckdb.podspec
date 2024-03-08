@@ -12,6 +12,10 @@ Pod::Spec.new do |spec|
   spec.preserve_paths = 'Sources/Cduckdb/include/*.h'
   spec.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Sources/Cduckdb/include/**" }
 
+  spec.pod_target_xcconfig = {
+    'OTHER_SWIFT_FLAGS' => '-D DUCKDB_BUILD_LIBRARY -D DUCKDB_EXTENSION_PARQUET_LINKED -D DUCKDB_EXTENSION_ICU_LINKED -D DUCKDB_EXTENSION_JSON_LINKED'
+  }
+
   spec.cocoapods_version = '>= 1.10.0'
 
   spec.ios.deployment_target = '12.0'
