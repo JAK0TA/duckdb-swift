@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'Cduckdb' do |cduckdb|
     cduckdb.source_files = 'Sources/Cduckdb/include/*.h'
     cduckdb.public_header_files = 'Sources/Cduckdb/include/*.h'
-    # cduckdb.library = "c++"
+    cduckdb.library = "c++"
   end
 
 
