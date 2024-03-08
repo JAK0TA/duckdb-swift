@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "Cduckdb"
-  spec.version      = "0.10.1"
+  spec.version      = "0.10.2"
   spec.summary      = "Summary of Cduckdb"
   spec.homepage     = "https://example.com"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
