@@ -19,6 +19,8 @@ Pod::Spec.new do |spec|
   spec.library = "c++"
 
 
+
+
 end
 
 Pod::Spec.new do |spec|
@@ -34,6 +36,10 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target = '10.14'
 
   spec.source_files = 'Sources/DuckDB/**/*.swift'
+
+  spec.subspec 'Cduckdb' do |evernote|
+    evernote.source_files = 'Sources/Cduckdb/include/*.h'
+  end
 
   spec.cocoapods_version = '>= 1.10.0'
 
