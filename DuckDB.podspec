@@ -35,13 +35,12 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '12.0'
   spec.osx.deployment_target = '10.14'
 
-  spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   spec.swift_version = '5.0'
 
   spec.subspec 'Cduckdb' do |cduckdb|
     cduckdb.source_files = 'Sources/Cduckdb/include/*.h'
     cduckdb.public_header_files = 'Sources/Cduckdb/include/*.h'
-    cduckdb.library = "c++"
+    # cduckdb.library = "c++"
   end
 
 
