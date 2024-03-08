@@ -14,11 +14,14 @@
 #ifdef _WIN32
 #if defined(DUCKDB_BUILD_LIBRARY) && !defined(DUCKDB_BUILD_LOADABLE_EXTENSION)
 #define DUCKDB_API __declspec(dllexport)
+print("DEV DUCKDB_BUILD_LIBRARY")
 #else
 #define DUCKDB_API __declspec(dllimport)
+print("DEV DUCKDB_API")
 #endif
 #else
 #define DUCKDB_API
+print("DEV DUCKDB_API")
 #endif
 #endif
 
